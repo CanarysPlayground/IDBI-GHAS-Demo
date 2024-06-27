@@ -4,13 +4,7 @@ on:
     branches:
       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        run: echo "Checkout the Repo"
-        
+jobs:      
   dependency-review:
     uses: CanarysPlayground/GHAS-Reusable/.github/workflows/dependency-review.yml@main
     
