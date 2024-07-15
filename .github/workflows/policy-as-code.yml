@@ -15,3 +15,5 @@ jobs:
     # Policy as Code
     - name: Advance Security Policy as Code
       uses: advanced-security/policy-as-code@v2.7.3
+      with:
+        token: ${{ secrets.ADMIN_TOKEN }}
