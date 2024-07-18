@@ -11,5 +11,5 @@ jobs:
   policy-as-code:
     uses: CanarysPlayground/GHAS-Reusable/.github/workflows/policy-as-code.yml@main
     with:
-      token: ${{ secrets.admin_token }}
+      token: ${{ secrets.ADMIN_TOKEN }}
     
