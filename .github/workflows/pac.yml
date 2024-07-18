@@ -1,4 +1,4 @@
-name: Policy as Code
+name: Policy-as-Code
 
 on:
   workflow_dispatch:
