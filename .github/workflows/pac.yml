@@ -10,6 +10,6 @@ on:
 jobs:
   policy-as-code:
     uses: CanarysPlayground/GHAS-Reusable/.github/workflows/policy-as-code.yml@main
-    with:
+    secrets:
       token: ${{ secrets.ADMIN_TOKEN }}
     
