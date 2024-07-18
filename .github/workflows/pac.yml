@@ -1,0 +1,13 @@
+name: Policy as Code
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "reusable_workflows" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  policy-as-code:
+    uses: CanarysPlayground/GHAS-Reusable/.github/workflows/policy-as-code.yml@main
+    
