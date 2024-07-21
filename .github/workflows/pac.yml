@@ -1,15 +1,14 @@
 name: Policy-as-Code
 
 on:
-  workflow_dispatch:
   push:
-    branches: [ "reusable_workflows" ]
+    branches: [master, main]
   pull_request:
-    branches: [ "main" ]
+    branches: [master, main]
+  workflow_dispatch:
 
 jobs:
   policy-as-code:
-    uses: CanarysPlayground/GHAS-Reusable/.github/workflows/policy-as-code.yml@main
-    secrets:
+    uses: CanarysPlayground/GHAS_Reusable/.github/workflows/policy-as-code.yml@main
+    with:
       admin_token: ${{ secrets.ADMIN_TOKEN }}
-    
