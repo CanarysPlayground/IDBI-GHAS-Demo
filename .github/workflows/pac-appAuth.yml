@@ -34,8 +34,8 @@ jobs:
 
       - name: Clone Policy Repository
         run: |
-          echo "https://${{ steps.get-token.outputs.token }}@github.com/CanarysPlayground/GHAS-Reusable.git"
-          git clone --branch main --depth 1 "https://${{ steps.get-token.outputs.token }}@github.com/CanarysPlayground/GHAS-Reusable.git" /tmp/repo
+          echo "https://${{ steps.get_workflow_token.outputs.token }}@github.com/CanarysPlayground/GHAS-Reusable.git"
+          git clone --branch main --depth 1 "https://${{ steps.get_workflow_token.outputs.token }}@github.com/CanarysPlayground/GHAS-Reusable.git" /tmp/repo
           ls -R /tmp/repo
 
       - name: Advance Security Compliance Action
