@@ -12,5 +12,4 @@ jobs:
     uses: CanarysPlayground/GHAS-Reusable/.github/workflows/policy-as-code.yml@main
     with:
       policy-path: policies/time-to-remediate.yml
-    secrets:
-      admin_token: ${{ secrets.ADMIN_TOKEN }}
+    secrets: inherit
