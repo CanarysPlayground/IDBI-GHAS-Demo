@@ -1,0 +1,15 @@
+name: Policy-as-Code
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+  workflow_dispatch:
+
+jobs:
+  policy-as-code:
+    uses: CanarysPlayground/GHAS-Reusable/.github/workflows/policy-as-code.yml@main
+    with:
+      policy-path: policies/time-to-remediate.yml
+    secrets: inherit

@@ -1,0 +1,17 @@
+name: Run CodeQL Analysis
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "reusable_workflows" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  codeql-analysis:
+    uses: CanarysPlayground/new_batch/.github/workflows/codeql-analysis.yml@main
+    with:
+      # languages: '["javascript", "python", "java", "go", "csharp", "cpp"]'
+      languages: '["javascript", "python", "go"]'
+      
+
