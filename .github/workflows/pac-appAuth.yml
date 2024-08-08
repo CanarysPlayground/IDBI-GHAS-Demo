@@ -12,18 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: tibdex/github-app-token@v1
-        id: get-token
-        with:
-          private_key: ${{ secrets.APP_ID }}
-          app_id: ${{ secrets.APP_KEY }}
-          
-      # - name: Get Token
-      #   id: get_workflow_token
-      #   uses: peter-murray/workflow-application-token-action@v3
+      # - uses: tibdex/github-app-token@v1
+      #   id: get-token
       #   with:
-      #     application_id: ${{ secrets.APP_ID }}
-      #     application_private_key: ${{ secrets.APP_KEY }}
+      #     private_key: ${{ secrets.APP_ID }}
+      #     app_id: ${{ secrets.APP_KEY }}
+          
+      - name: Get Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v3
+        with:
+          application_id: ${{ secrets.APP_ID }}
+          application_private_key: ${{ secrets.APP_KEY }}
 
       - name: Advance Security Compliance Action
         uses: advanced-security/policy-as-code@main
